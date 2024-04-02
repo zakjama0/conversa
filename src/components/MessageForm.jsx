@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 const MessageForm = ({ sendMessage }) => {
@@ -24,5 +25,4 @@ const MessageForm = ({ sendMessage }) => {
         </form>
     )
 }
-
 export default MessageForm;
