@@ -20,6 +20,7 @@ const Chat = ({chatroom, deleteChatroom, sendMessage}) => {
        let userData = data.messages.map((message)=> message.user.username);
        let user = [...new Set(userData)];
        setUsers(user);
+    }
 
     useEffect(() => {
         fetchMessages();
@@ -35,5 +36,6 @@ const Chat = ({chatroom, deleteChatroom, sendMessage}) => {
         </>
     );
 }
+
  
 export default Chat;
