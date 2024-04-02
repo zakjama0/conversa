@@ -1,19 +1,18 @@
 
 import Message from './Message';
+
 const MessageList = ({ messages }) => {
-    const messageComponent = messages.map((messageComponent) => {
+    const mappedMessage = messages.map((message) => {
         return <Message
-            key={messageComponent.id}
-            messageComponent={messageComponent}
+            key={message.id}
+            message={message}
             />
     })
 
     return (
         <>
             <h1>Messages</h1>
-            {messageComponent}
-
-
+            {mappedMessage}
 
         </>);
 }
