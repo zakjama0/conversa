@@ -31,7 +31,7 @@ const ChatForm = ({ chatrooms, postChatrooms }) => {
             <form onSubmit={handleFormSubmit}>
                 <label htmlFor="chatName"></label>
                 <input
-                     id="chatroom-name"
+                     id="chatName"
                      name="name"
                      type="text"
                      placeholder="enter chatroom name"

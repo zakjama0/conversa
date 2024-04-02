@@ -1,7 +1,13 @@
-const Chat = ({chat}) => {
+const Chat = ({chatroom, deleteChatroom}) => {
+
+    const handleDeleteButton = () => {
+        deleteChatroom(chatroom.id)
+    }
+    
     return ( 
         <>
-            <h2>{chat.name}</h2>
+            <h2>{chatroom.name}</h2>
+            <button onClick={handleDeleteButton}>Delete</button>
         </>
     );
 }

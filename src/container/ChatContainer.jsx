@@ -33,11 +33,21 @@ const ChatContainer = () => {
         setChatrooms([...chatrooms, savedNewChatroom]);
     }
 
+    const deleteChatroom = async (chatroomId) => {
+
+        await fetch("http://localhost:8080/chatrooms/"+chatroomId, {
+            method: "DELETE",
+            headers: {"Content-Type": "application/json"},
+        })
+        console.log(chatroomId);
+        setChatrooms(chatrooms.filter((chatroom) => chatroom.id !== chatroomId))
+    }
+
 
    return ( 
    <>
    {/* {chatroomTest} */}
-        <ChatList chatrooms={chatrooms}/>
+        <ChatList chatrooms={chatrooms} deleteChatroom={deleteChatroom}/>
         <ChatForm chatrooms={chatrooms} postChatrooms={postChatrooms} />
     </> );
 }
