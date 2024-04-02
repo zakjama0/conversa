@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const MessageForm = ({ User, Chat, sendMessage, postMessage}) => {
+const MessageForm = ({ user, chat, sendMessage, postMessage}) => {
     const [content, setContent] = useState("");
     const [stateMessage, setStateMessage] = useState(
         {
