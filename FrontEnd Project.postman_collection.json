@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "16638e71-17fb-421c-b010-7dabce074eb0",
+		"name": "FrontEnd Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34009082",
+		"_collection_link": "https://galactic-shuttle-528229.postman.co/workspace/New-Team-Workspace~40782760-8ba9-4ab1-b05e-7b02114a53c5/collection/32552291-16638e71-17fb-421c-b010-7dabce074eb0?action=share&source=collection_link&creator=34009082"
+	},
+	"item": [
+		{
+			"name": "Chatroom",
+			"item": [
+				{
+					"name": "/chatrooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/chatrooms",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"chatrooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/chatrooms id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/chatrooms/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"chatrooms",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/chatrooms",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"name\": \"gecko\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/chatrooms",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"chatrooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "chatrooms",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"new_name\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/chatrooms/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"chatrooms",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/chatrooms",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/chatrooms/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"chatrooms",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "/messages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/messages",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/messages id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/messages/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"messages",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/messages",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\" : 2,\n  \"message\" : \"Earth is this galaxy's insane asylum. Welcome to my ward.\",\n  \"chatroomId\" : 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/messages",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/messages",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " Time is the best teacher of all. Too bad it kills all its students.\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/messages/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"messages",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/messages",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/messages/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"messages",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "/users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users pic id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/2/profilePicture",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"2",
+								"profilePicture"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"Gorilla\",\n  \"email\": \"Gorilla@Gorilla.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"Gorilla\",\n  \"email\": \"Gorilla@Gorilla.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/users/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
