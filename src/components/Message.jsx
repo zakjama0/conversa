@@ -1,10 +1,10 @@
-const Message = ({messageComponent}) => {
+const Message = ({message}) => {
    
    
     return ( 
         <article>
-            <p>{messageComponent.message}</p>
-            <p>Sent By: {messageComponent.user.username}</p>
+            <p>{message.message}</p>
+            <p>Sent By: {message.user.username}</p>
         </article>
 
       );
