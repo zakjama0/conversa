@@ -31,7 +31,6 @@ const Chat = ({chatroom, deleteChatroom, sendMessage}) => {
             <button onClick={handleDeleteButton}>Delete</button>
             <MessageList messages={messages}/>
             <MessageForm sendMessage={sendMessage}/>
-            
         </>
     );
 }
