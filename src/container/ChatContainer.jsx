@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import ChatList from "../components/ChatList";
 import ChatForm from "../components/ChatForm";
-import { useContext } from "react";
+import Login from "../components/Login";
 
 const ChatContainer = () => {
    const [user, setUser] = useState([]);
    const  [chats, setChats] = useState([]);
    const [messages, setMessages] = useState([])
    const [chatrooms, setChatrooms] = useState([]);
+//    const [activeUser, setActiveUser] = useState({});
 
 //    export const userState = react.createContext
    const fetchChatroom = async () =>{
@@ -16,24 +17,21 @@ const ChatContainer = () => {
     setChatrooms(data)
    }
 
-   const fetchUser = async () => {
-    const response = await fetch('http://localhost:8080/users/2')
+   const fetchUsers = async () =>{
+    const response = await fetch('http://localhost:8080/users')
     const data = await response.json()
-    setUser(data)
+    setUsers(data)
    }
  
 
    useEffect(() =>{
     fetchChatroom()
-    fetchUser()
+    fetchUsers()
+    console.log(users)
    }, [])
 
-//    const chatroomTest = chatroom.map( chatroom =>{
-//     return <p>{chatroom.name}</p>
-//    })
 
     const postChatrooms = async(newChatroom) => {
-        // console.log(newChatroom);
         const response = await fetch("http://localhost:8080/chatrooms", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
@@ -57,6 +55,7 @@ const ChatContainer = () => {
    return ( 
    <>
    {/* {chatroomTest} */}
+        <Login users = {users} />
         <ChatList chatrooms={chatrooms} deleteChatroom={deleteChatroom}/>
         <ChatForm chatrooms={chatrooms} postChatrooms={postChatrooms} />
     </> );

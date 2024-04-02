@@ -1,28 +1,29 @@
 import { useState, useEffect } from "react"
 import MessageList from "./MessageList"
 import MessageForm from "./MessageForm";
+import UserList from "./UserList";
 
 const Chat = ({chatroom, deleteChatroom, sendMessage}) => {
 
     const [messages, setMessages] = useState ([]);
+    const [users, setUsers] = useState ([]);
 
     const handleDeleteButton = () => {
         deleteChatroom(chatroom.id)
     }
 
-    
-
     const fetchMessages = async() => {
-        const response = await fetch (`http://localhost:8080/chatrooms/${chatroom.id}`)
-        // const response = await fetch (`http://localhost:8080/messages`)
+        const response = await fetch (`http://localhost:8080/chatrooms/${chatroom.id}`);
         const data = await response.json()
         
         setMessages(data.messages)
+       let userData = data.messages.map((message)=> message.user.username);
+       let user = [...new Set(userData)];
+       setUsers(user);
     }
 
     useEffect(() => {
         fetchMessages();
-        console.log(messages);
     }, [])
     
     return ( 
@@ -31,8 +32,11 @@ const Chat = ({chatroom, deleteChatroom, sendMessage}) => {
             <button onClick={handleDeleteButton}>Delete</button>
             <MessageList messages={messages}/>
             <MessageForm sendMessage={sendMessage}/>
+            <UserList users={users}/>
+
         </>
     );
 }
+
  
 export default Chat;
