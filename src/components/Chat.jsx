@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import MessageList from "./MessageList"
 
 const Chat = ({chatroom, deleteChatroom}) => {
 
@@ -22,6 +23,7 @@ const Chat = ({chatroom, deleteChatroom}) => {
         <>
             <h2>{chatroom.name}</h2>
             <button onClick={handleDeleteButton}>Delete</button>
+            <MessageList messages={messages}/>
         </>
     );
 }

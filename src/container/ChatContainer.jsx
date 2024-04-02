@@ -49,6 +49,7 @@ const ChatContainer = () => {
    {/* {chatroomTest} */}
         <ChatList chatrooms={chatrooms} deleteChatroom={deleteChatroom}/>
         <ChatForm chatrooms={chatrooms} postChatrooms={postChatrooms} />
+        
     </> );
 }
  
