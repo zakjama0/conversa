@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 const ChatContainer = () => {
-//    const [users, setUsers] = useState([]);
-//    const  [chats, setChats] = useState([]);
+   const [users, setUsers] = useState([]);
+   const  [chats, setChats] = useState([]);
    const [chatroom, setChatroom] = useState([]);
 
    const fetchChatroom = async () =>{
@@ -16,13 +16,13 @@ const ChatContainer = () => {
     console.log(chatroom)
    }, [])
 
-//    const chatroomTest = chatroom.map( chatroom =>{
-//     return <p>{chatroom.name}</p>
-//    })
+   const chatroomTest = chatroom.map( chatroom =>{
+    return <p>{chatroom.name}</p>
+   })
 
-   return ( <>
-   {/* {chatroomTest}
-     */}
+   return ( 
+   <>
+   {chatroomTest}
     
     </> );
 }
