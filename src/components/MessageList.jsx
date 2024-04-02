@@ -1,3 +1,4 @@
+import Message from "./Message";
 const MessageList = ({messages}) => {
     const mappingMessageList = messages.map((messages, index)=>{
         return <Message message={message} key={index} />
