@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import MessageList from "./MessageList"
+import MessageForm from "./MessageForm";
 
-const Chat = ({chatroom, deleteChatroom}) => {
+const Chat = ({chatroom, deleteChatroom, sendMessage}) => {
 
     const [messages, setMessages] = useState ([]);
 
@@ -29,6 +30,7 @@ const Chat = ({chatroom, deleteChatroom}) => {
             <h2>{chatroom.name}</h2>
             <button onClick={handleDeleteButton}>Delete</button>
             <MessageList messages={messages}/>
+            <MessageForm sendMessage={sendMessage}/>
             
         </>
     );
