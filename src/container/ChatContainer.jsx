@@ -9,7 +9,7 @@ const ChatContainer = () => {
    const [messages, setMessages] = useState([])
    const [chatrooms, setChatrooms] = useState([]);
 
-   export const userState = react.createContext
+//    export const userState = react.createContext
    const fetchChatroom = async () =>{
     const response = await fetch('http://localhost:8080/chatrooms')
     const data = await response.json()
