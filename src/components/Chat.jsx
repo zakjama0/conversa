@@ -9,6 +9,8 @@ const Chat = ({chatroom, deleteChatroom}) => {
         deleteChatroom(chatroom.id)
     }
 
+    
+
     const fetchMessages = async() => {
         const response = await fetch ('http://localhost:8080/messages')
         const data = await response.json()
@@ -24,6 +26,7 @@ const Chat = ({chatroom, deleteChatroom}) => {
             <h2>{chatroom.name}</h2>
             <button onClick={handleDeleteButton}>Delete</button>
             <MessageList messages={messages}/>
+            
         </>
     );
 }

@@ -7,8 +7,6 @@ const ChatContainer = () => {
    const [users, setUsers] = useState([]);
    const  [chats, setChats] = useState([]);
    const [messages, setMessages] = useState([])
-//    const [users, setUsers] = useState([]);
-//    const  [chats, setChats] = useState([]);
    const [chatrooms, setChatrooms] = useState([]);
 
    const fetchChatroom = async () =>{
@@ -16,16 +14,10 @@ const ChatContainer = () => {
     const data = await response.json()
     setChatrooms(data)
    }
-   const fetchMessages = async () =>{
-    const response = await fetch('http://localhost:8080/messages')
-    const data = await response.json()
-    setMessages(data)
-   }
+ 
 
    useEffect(() =>{
     fetchChatroom()
-    console.log(chatroom)
-    // console.log(chatrooms)
    }, [])
 
 //    const chatroomTest = chatroom.map( chatroom =>{
@@ -59,7 +51,6 @@ const ChatContainer = () => {
    {/* {chatroomTest} */}
         <ChatList chatrooms={chatrooms} deleteChatroom={deleteChatroom}/>
         <ChatForm chatrooms={chatrooms} postChatrooms={postChatrooms} />
-//         <MessageList messages={messages} />
     </> );
 }
  
