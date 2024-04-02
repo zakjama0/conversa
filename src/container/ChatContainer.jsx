@@ -20,12 +20,8 @@ const ChatContainer = () => {
     fetchChatroom()
    }, [])
 
-//    const chatroomTest = chatroom.map( chatroom =>{
-//     return <p>{chatroom.name}</p>
-//    })
 
     const postChatrooms = async(newChatroom) => {
-        // console.log(newChatroom);
         const response = await fetch("http://localhost:8080/chatrooms", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
