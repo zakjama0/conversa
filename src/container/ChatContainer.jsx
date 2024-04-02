@@ -1,3 +1,4 @@
+import MessageList from "../components/MessageList";
 import { useEffect, useState } from "react";
 
 const ChatContainer = () => {
@@ -30,8 +31,8 @@ const ChatContainer = () => {
 
    return ( 
    <>
-   {chatroomTest}
-    
+   <MessageList messages={messages} />
+   
     </> );
 }
  
