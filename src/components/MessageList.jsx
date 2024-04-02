@@ -1,11 +1,21 @@
-import Message from "./Message";
-const MessageList = ({messages}) => {
-    const mappingMessageList = messages.map((messages, index)=>{
-        return <Message message={message} key={index} />
+
+import Message from './Message';
+const MessageList = ({ messages }) => {
+    const messageComponent = messages.map((messageComponent) => {
+        return <Message
+            key={messageComponent.id}
+            messageComponent={messageComponent}
+            />
     })
-    return ( 
-        <h1>Hi</h1>
-    );
+
+    return (
+        <>
+            <h1>Messages</h1>
+            {messageComponent}
+
+
+
+        </>);
 }
- 
+
 export default MessageList;
