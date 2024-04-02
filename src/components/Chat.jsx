@@ -33,6 +33,7 @@ const Chat = ({chatroom, deleteChatroom, sendMessage}) => {
             <MessageList messages={messages}/>
             <MessageForm sendMessage={sendMessage}/>
             <UserList users={users}/>
+
         </>
     );
 }

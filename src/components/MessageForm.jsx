@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
+
 const MessageForm = ({ activeUser, chatroom, sendMessage, postMessage}) => {
+
     const [content, setContent] = useState("");
     const [stateMessage, setStateMessage] = useState(
         {
@@ -18,7 +20,9 @@ const MessageForm = ({ activeUser, chatroom, sendMessage, postMessage}) => {
             content: "",
             chatroomid: null
         })
+
     }
+    
 
     const handleChange = (event) => {
         const propertyName = event.target.name;
@@ -26,6 +30,7 @@ const MessageForm = ({ activeUser, chatroom, sendMessage, postMessage}) => {
         copiedMessage[propertyName] = event.target.value;
         setStateMessage(copiedMessage);
     }
+
     return (
         <form onSubmit={handleFormSubmit}>
             <input

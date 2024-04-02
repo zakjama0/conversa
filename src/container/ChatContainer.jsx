@@ -1,16 +1,16 @@
-import MessageList from "../components/MessageList";
 import { useEffect, useState } from "react";
 import ChatList from "../components/ChatList";
 import ChatForm from "../components/ChatForm";
 import Login from "../components/Login";
 
 const ChatContainer = () => {
-   const [users, setUsers] = useState([]);
+   const [user, setUser] = useState([]);
    const  [chats, setChats] = useState([]);
    const [messages, setMessages] = useState([])
    const [chatrooms, setChatrooms] = useState([]);
 //    const [activeUser, setActiveUser] = useState({});
 
+//    export const userState = react.createContext
    const fetchChatroom = async () =>{
     const response = await fetch('http://localhost:8080/chatrooms')
     const data = await response.json()
