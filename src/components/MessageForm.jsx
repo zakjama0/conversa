@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 const MessageForm = ({ activeUser, chatroom, sendMessage, postMessage}) => {
@@ -10,7 +9,7 @@ const MessageForm = ({ activeUser, chatroom, sendMessage, postMessage}) => {
             chatroomId: null
         }
     )
-
+    
     const handleFormSubmit = (event) => {
         event.preventDefault();
         postMessage(stateMessage);
