@@ -3,6 +3,8 @@ import ChatList from "../components/ChatList";
 import ChatForm from "../components/ChatForm";
 import Login from "../components/Login";
 
+export const userState = React.createContext(); 
+
 const ChatContainer = () => {
    const [user, setUser] = useState([]);
    const  [chats, setChats] = useState([]);
@@ -54,11 +56,15 @@ const ChatContainer = () => {
 
    return ( 
    <>
-   {/* {chatroomTest} */}
+
+   <userState.Provider value={{user}}>
         <Login users = {users} />
         <ChatList chatrooms={chatrooms} deleteChatroom={deleteChatroom}/>
         <ChatForm chatrooms={chatrooms} postChatrooms={postChatrooms} />
-    </> );
+    
+    </userState.Provider>
+    </> 
+    );
 }
  
 export default ChatContainer;

@@ -1,9 +1,12 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import MessageList from "./MessageList"
 import MessageForm from "./MessageForm";
 import UserList from "./UserList";
+import { userState } from "../container/ChatContainer";
 
 const Chat = ({chatroom, deleteChatroom, sendMessage}) => {
+    const context = useContext(userState)
+    const {user} = context;
 
     const [messages, setMessages] = useState ([]);
     const [users, setUsers] = useState ([]);
