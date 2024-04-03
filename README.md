@@ -11,8 +11,15 @@
 9. [Wireframe](#wireframe)
 
 
-<a id="introduction"></a>
+<a id="technology"></a>
+### Tech Stack
+This is a front-end project and its built using:
++ JavaScript + React
++ HTML
++ CSS
+The Backend API is :
 
+<a id="mvp"></a>
 ### MVP
 
 | Task                                | Description                                   |
