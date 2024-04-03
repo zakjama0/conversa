@@ -10,7 +10,7 @@ const MessageList = ({ messages }) => {
 
     return (
         <>
-            <h1>Messages</h1>
+            <h3>Messages</h3>
             {mappedMessage}
 
         </>);

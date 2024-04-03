@@ -4,7 +4,7 @@ import MessageForm from "./MessageForm";
 import UserList from "./UserList";
 import { userState } from "../container/ChatContainer";
 
-const Chat = ({chatroom, deleteChatroom, sendMessage}) => {
+const Chat = ({chatroom, deleteChatroom}) => {
     const context = useContext(userState)
     const {activeUser} = context;
 
@@ -24,6 +24,16 @@ const Chat = ({chatroom, deleteChatroom, sendMessage}) => {
        let user = [...new Set(userData)];
        setUsers(user);
     }
+    
+    const postMessage = async(newMessage) => {
+        const response = await fetch("http://localhost:8080/messages", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(newMessage)
+        })
+        const savedNewMessage = await response.json();
+        setMessages([...messages, savedNewMessage]);
+    }
 
     useEffect(() => {
         fetchMessages();
@@ -34,7 +44,7 @@ const Chat = ({chatroom, deleteChatroom, sendMessage}) => {
             <h2>{chatroom.name}</h2>
             <button onClick={handleDeleteButton}>Delete</button>
             <MessageList messages={messages}/>
-            <MessageForm sendMessage={sendMessage}/>
+            <MessageForm postMessage={postMessage} chatroom={chatroom} activeUser={activeUser}/>
             <UserList users={users}/>
 
         </>

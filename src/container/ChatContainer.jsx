@@ -9,6 +9,7 @@ import Navigation from "../components/Navigation";
 export const userState = React.createContext();
 
 const ChatContainer = () => {
+
     const [users, setUsers] = useState([]);
     const [activeUser, setActiveUser] = useState([]);
     const [chatrooms, setChatrooms] = useState([]);
@@ -37,6 +38,7 @@ const ChatContainer = () => {
       }
     
     const postChatrooms = async (newChatroom) => {
+
         const response = await fetch("http://localhost:8080/chatrooms", {
             method: "POST",
             headers: { "Content-Type": "application/json" },

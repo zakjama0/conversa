@@ -12,7 +12,7 @@ const UserList = ({users}) => {
             <div className = "mappedUsers">
             {mappedUsers}
             </div>
-            
+        
             </div>
         </>
     );

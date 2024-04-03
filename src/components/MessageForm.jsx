@@ -1,29 +1,25 @@
 import React, { useState } from "react";
 
-
-const MessageForm = ({ activeUser, chatroom, sendMessage, postMessage}) => {
-
-    const [content, setContent] = useState("");
+const MessageForm = ({ postMessage,  chatroom, activeUser}) => {
     const [stateMessage, setStateMessage] = useState(
         {
-            userId: null,
-            content: "",
-            chatroomId: null
+            userId: activeUser.id,
+            message: "",
+            chatroomId: chatroom.id
         }
     )
-    
+
     const handleFormSubmit = (event) => {
         event.preventDefault();
+        // console.log(stateMessage);
         postMessage(stateMessage);
         setStateMessage({
-            userId: null,
-            content: "",
-            chatroomid: null
+            userId: activeUser.id,
+            message: "",
+            chatroomId: chatroom.id
         })
-
     }
     
-
     const handleChange = (event) => {
         const propertyName = event.target.name;
         const copiedMessage = {...stateMessage};
@@ -33,11 +29,14 @@ const MessageForm = ({ activeUser, chatroom, sendMessage, postMessage}) => {
 
     return (
         <form onSubmit={handleFormSubmit}>
+            <label htmlFor="userMessage"></label>
             <input
+                id="userMessage"
+                name="message"
                 type="text"
                 placeholder="Type here"
                 onChange={handleChange} 
-                value = {stateMessage.content} />
+                value = {stateMessage.message} />
             <input type="submit" value="Send"/>
         </form>
     )
