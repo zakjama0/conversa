@@ -15,6 +15,8 @@ const Register = ({users, registerUser}) => {
       return;
     }
   }
+
+
   const handleValidation = () => {
     let validation = true;
 
