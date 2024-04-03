@@ -35,8 +35,8 @@ const ChatContainer = () => {
 
     const registerUser = (newUser) => {
         setUsers([...users, newUser]);
-      }
-    
+    }
+
     const postChatrooms = async (newChatroom) => {
 
         const response = await fetch("http://localhost:8080/chatrooms", {
@@ -95,13 +95,13 @@ const ChatContainer = () => {
 
     return (
         <>
-<div className = "container">
-            <userState.Provider value={{ activeUser, setActiveUser }}>
-                {/* <Login users={users} />
+            <div className="container">
+                <userState.Provider value={{ activeUser, setActiveUser }}>
+                    {/* <Login users={users} />
                 <ChatList chatrooms={chatrooms} deleteChatroom={deleteChatroom} />
                 <ChatForm chatrooms={chatrooms} postChatrooms={postChatrooms} /> */}
-                <RouterProvider router={chatRoutes}/>
-            </userState.Provider>
+                    <RouterProvider router={chatRoutes} />
+                </userState.Provider>
             </div>
         </>
     );

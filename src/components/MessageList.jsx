@@ -5,18 +5,17 @@ const MessageList = ({ messages }) => {
         return <Message
             key={message.id}
             message={message}
-            />
+        />
     })
 
     return (
         <>
-        <div className = "messageList">
-            <h3>Messages</h3>
-            <div className="mappedMessages">
-            {mappedMessage}
+            <div className="messageList">
+                <h3>Messages</h3>
+                <div className="mappedMessages">
+                    {mappedMessage}
+                </div>
             </div>
-            </div>
-
         </>);
 }
 
