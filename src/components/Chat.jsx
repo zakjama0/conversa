@@ -1,17 +1,20 @@
-import { useState, useEffect, useContext } from "react"
+import { useState, useEffect } from "react"
 import MessageList from "./MessageList"
 import MessageForm from "./MessageForm";
 import UserList from "./UserList";
-import { userState } from "../container/ChatContainer";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
-const Chat = ({ chatroom, deleteChatroom }) => {
-    const context = useContext(userState)
-    const { activeUser } = context;
+
+const Chat = ({  deleteChatroom }) => {
+   
     const [messages, setMessages] = useState([]);
     const [users, setUsers] = useState([]);
+    const chatroom = useLoaderData();
+    const navigate = useNavigate();
 
     const handleDeleteButton = () => {
         deleteChatroom(chatroom.id)
+        navigate("/chatrooms");
     }
 
     const fetchMessages = async () => {
@@ -36,7 +39,7 @@ const Chat = ({ chatroom, deleteChatroom }) => {
 
     useEffect(() => {
         fetchMessages();
-    }, [])
+    }, [chatroom])
 
     return (
         <>
@@ -44,7 +47,7 @@ const Chat = ({ chatroom, deleteChatroom }) => {
                 <h2>{chatroom.name}</h2>
                 <button onClick={handleDeleteButton}>Delete</button>
                 <MessageList messages={messages} />
-                <MessageForm postMessage={postMessage} chatroom={chatroom} activeUser={activeUser} />
+                <MessageForm postMessage={postMessage} chatroom={chatroom}/>
                 <UserList users={users} />
             </div>
         </>

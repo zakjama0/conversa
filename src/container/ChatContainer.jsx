@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ChatList from "../components/ChatList";
 import ChatForm from "../components/ChatForm";
+import Chat from "../components/Chat";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "../components/Login";
 import Register from "../components/Register";
@@ -76,44 +77,35 @@ const ChatContainer = () => {
                         users={users} />
                 },
                 {
+                    path: "/chatrooms/new",
+                    element: <ChatForm
+                        chatrooms={chatrooms}
+                        postChatrooms={postChatrooms} />
+                },
+                {
                     path: "/chatrooms",
                     element: <ChatList
-                        chatrooms={chatrooms}
-                        deleteChatroom={deleteChatroom} />,
-                    children: [
-                        {
-                        path: "/chatrooms/new",
-                        element: <ChatForm
-                            chatrooms={chatrooms}
-                            postChatrooms={postChatrooms} />
-                    },
-
-                    {
-                        path:"/chatrooms/:id",
-                        loader: chatroomLoader,
-                        element: <Chat 
-                        chatroom = {chatroom}
-                        deleteChatroom = {deleteChatroom}
-                        />
-                    }
-                ]
-                 
+                        chatrooms={chatrooms}/>,
+                        children: [
+                            {
+                                path:"/chatrooms/:id",
+                                loader: chatroomLoader,
+                                element: <Chat deleteChatroom={deleteChatroom}/>
+                            }
+                        ]
                 },
-                
                 {
                     path: "/register",
                     element: <Register users={users} registerUser={registerUser} />
                 }
             ]
-
         }
-
     ])
 
     return (
         <>
             <div className="container">
-                <userState.Provider value={{ activeUser, setActiveUser }}>
+                <userState.Provider value={{ activeUser:activeUser, setActiveUser:setActiveUser }}>
                     {/* <Login users={users} />
                 <ChatList chatrooms={chatrooms} deleteChatroom={deleteChatroom} />
                 <ChatForm chatrooms={chatrooms} postChatrooms={postChatrooms} /> */}
