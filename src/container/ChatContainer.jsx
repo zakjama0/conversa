@@ -11,7 +11,7 @@ export const userState = React.createContext();
 const ChatContainer = () => {
 
     const [users, setUsers] = useState([]);
-    const [activeUser, setActiveUser] = useState([]);
+    const [activeUser, setActiveUser] = useState({});
     const [chatrooms, setChatrooms] = useState([]);
 
     const fetchChatroom = async () => {
@@ -92,9 +92,6 @@ const ChatContainer = () => {
         }
 
     ])
-
-    
-
 
     return (
         <>
