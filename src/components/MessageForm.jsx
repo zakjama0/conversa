@@ -28,17 +28,19 @@ const MessageForm = ({ postMessage,  chatroom, activeUser}) => {
     }
 
     return (
+        <div className = "messageForm">
         <form onSubmit={handleFormSubmit}>
             <label htmlFor="userMessage"></label>
-            <input
+            <input 
                 id="userMessage"
                 name="message"
                 type="text"
                 placeholder="Type here"
                 onChange={handleChange} 
                 value = {stateMessage.message} />
-            <input type="submit" value="Send"/>
+            <input className = "send" type="submit" value="Send"/>
         </form>
+        </div>
     )
 }
 export default MessageForm;

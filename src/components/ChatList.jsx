@@ -11,8 +11,12 @@ const ChatList = ({chatrooms, getAllChatrooms, getChatroomById, updateChatroom, 
 
     return ( 
         <>
+        <div className = "chatList">
             <h1>Chatroom List</h1>
+            <div className = "mappedChats">
             {mapChatList}
+            </div>
+        </div>
         </>
     );
 }

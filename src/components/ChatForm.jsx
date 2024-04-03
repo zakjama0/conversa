@@ -28,6 +28,7 @@ const ChatForm = ({ chatrooms, postChatrooms }) => {
 
     return (
         <>
+        <div className = "chatForm">
             <form onSubmit={handleFormSubmit}>
                 <label htmlFor="chatName"></label>
                 <input
@@ -38,8 +39,9 @@ const ChatForm = ({ chatrooms, postChatrooms }) => {
                      onChange={handleChange}
                      value={stateChatroom.name} 
                 />
-                <input type="submit" value= "Create Chatroom" />
+                <input className = "create" type="submit" value= "+" />
             </form>
+        </div>
         </>
     );
 }

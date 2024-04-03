@@ -28,6 +28,7 @@ const Login = ({ users }) => {
 
     return (
         <>
+        <div className="register">
             <form onSubmit={handleFormSubmit}>
                 <label htmlFor="login-name">Username:</label>
                 <input
@@ -47,15 +48,16 @@ const Login = ({ users }) => {
                     placeholder="Enter email.."
                 />
 
-                <input type="submit" value="Login User" />
+                <input className = "loginUser" type="submit" value="Login" />
 
             </form>
+            
 
             <h1>Welcome back! Please login</h1>
 
 
             <Outlet />
-
+        </div>
         </>
 
 

@@ -2,9 +2,11 @@ const Message = ({message}) => {
    
    
     return ( 
-        <article>
+        <article className = "message">
             <p>{message.message}</p>
+            <div className="sender">
             <p>Sent By: {message.user.username}</p>
+            </div>
         </article>
 
       );
