@@ -6,7 +6,7 @@ const UserList = ({users}) => {
     })
     return ( 
         <>
-            <h1>UserList for this Chat</h1>
+            <h1>List of Users</h1>
             {mappedUsers}
         </>
     );
