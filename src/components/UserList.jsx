@@ -6,8 +6,14 @@ const UserList = ({users}) => {
     })
     return ( 
         <>
-            <h1>List of Users</h1>
+        <div className = "userList">
+            <h1>UserList for this Chat</h1>
+
+            <div className = "mappedUsers">
             {mappedUsers}
+            </div>
+        
+            </div>
         </>
     );
 }

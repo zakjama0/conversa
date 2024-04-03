@@ -2,7 +2,10 @@ const User = ({user}) => {
 
     return (  
         <>
-        <p>{user}</p>
+
+        <div className = "user">
+        <h1>{user}</h1>
+        </div>
         </>
     );
 }
