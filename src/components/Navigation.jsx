@@ -8,6 +8,7 @@ const Navigation = () => {
                     <ul>
                         <li><Link to="/login">Login</Link></li>
                         <li><Link to="/register">Sign Up</Link></li>
+                        <li><Link to="/chatrooms/new">+</Link> </li>
                     </ul>
                 </nav>
                 <Outlet />

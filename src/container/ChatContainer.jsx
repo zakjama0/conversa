@@ -71,9 +71,10 @@ const ChatContainer = () => {
                 },
                 {
                     path: "/chatrooms",
-                    element: <ChatList
-                        chatrooms={chatrooms}
-                        deleteChatroom={deleteChatroom} />
+                    element:
+                        <ChatList
+                            chatrooms={chatrooms}
+                            deleteChatroom={deleteChatroom} />,
                 },
                 {
                     path: "/chatrooms/new",
@@ -85,12 +86,8 @@ const ChatContainer = () => {
                     path: "/register",
                     element: <Register users={users} registerUser={registerUser} />
                 }
-
-
             ]
-
         }
-
     ])
 
     return (
