@@ -9,16 +9,16 @@ const Login = ({ users }) => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        const filteredUser = users.filter((user) =>
+        const filteredUser = users.find((user) =>
             user.username.toLowerCase() === loggedUsername.toLowerCase()
         );
-
-        if (filteredUser.length === 0) {
+    
+        if (!filteredUser) {
             alert("Please Sign Up")
             e.target.reset();
             return;
         }
-        setActiveUser(filteredUser[0]);
+        setActiveUser(filteredUser);
         e.target.reset();
         navigate("/chatrooms")
     }
