@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ChatList from "../components/ChatList";
 import ChatForm from "../components/ChatForm";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "../components/Login";
+import Register from "../components/Register";
+import Navigation from "../components/Navigation";
 
 export const userState = React.createContext();
 
@@ -29,7 +32,10 @@ const ChatContainer = () => {
         console.log(users)
     }, [])
 
-
+    const registerUser = (newUser) => {
+        setUsers([...users, newUser]);
+      }
+    
     const postChatrooms = async (newChatroom) => {
         const response = await fetch("http://localhost:8080/chatrooms", {
             method: "POST",
@@ -51,14 +57,49 @@ const ChatContainer = () => {
     }
 
 
+    const chatRoutes = createBrowserRouter([
+        {
+            path: "/",
+            element: <Navigation />,
+            children: [
+                {
+                    path: "/login",
+                    element: <Login
+                        users={users} />
+                },
+                {
+                    path: "/chatrooms",
+                    element: <ChatList
+                        chatrooms={chatrooms}
+                        deleteChatroom={deleteChatroom} />
+                },
+                {
+                    path: "/chatrooms/new",
+                    element: <ChatForm
+                        chatrooms={chatrooms}
+                        postChatrooms={postChatrooms} />
+                },
+                {
+                    path: "/register",
+                    element: <Register users={users} registerUser={registerUser} />
+                }
+
+
+            ]
+
+        }
+
+    ])
+
+
     return (
         <>
 
             <userState.Provider value={{ activeUser, setActiveUser }}>
-                <Login users={users} />
+                {/* <Login users={users} />
                 <ChatList chatrooms={chatrooms} deleteChatroom={deleteChatroom} />
-                <ChatForm chatrooms={chatrooms} postChatrooms={postChatrooms} />
-
+                <ChatForm chatrooms={chatrooms} postChatrooms={postChatrooms} /> */}
+                <RouterProvider router={chatRoutes}/>
             </userState.Provider>
         </>
     );
