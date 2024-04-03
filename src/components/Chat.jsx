@@ -6,7 +6,7 @@ import { userState } from "../container/ChatContainer";
 
 const Chat = ({chatroom, deleteChatroom, sendMessage}) => {
     const context = useContext(userState)
-    const {user} = context;
+    const {activeUser} = context;
 
     const [messages, setMessages] = useState ([]);
     const [users, setUsers] = useState ([]);
