@@ -44,10 +44,9 @@ const Chat = ({ chatroom, deleteChatroom }) => {
                 <h2>{chatroom.name}</h2>
                 <button onClick={handleDeleteButton}>Delete</button>
                 <MessageList messages={messages} />
-                <MessageForm postMessage={postMessage} chatroom={chatroom} activeUser={activeUser} />
-                <UserList users={users} />
+                <MessageForm postMessage={postMessage} chatroom={chatroom} activeUser={activeUser} /> 
+                <UserList users={users} /> 
             </div>
-
         </>
     );
 }
