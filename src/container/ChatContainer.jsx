@@ -95,13 +95,14 @@ const ChatContainer = () => {
 
     return (
         <>
-
+<div className = "container">
             <userState.Provider value={{ activeUser, setActiveUser }}>
                 {/* <Login users={users} />
                 <ChatList chatrooms={chatrooms} deleteChatroom={deleteChatroom} />
                 <ChatForm chatrooms={chatrooms} postChatrooms={postChatrooms} /> */}
                 <RouterProvider router={chatRoutes}/>
             </userState.Provider>
+            </div>
         </>
     );
 }

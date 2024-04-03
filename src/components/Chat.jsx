@@ -41,11 +41,13 @@ const Chat = ({chatroom, deleteChatroom}) => {
     
     return ( 
         <>
+        <div className = "chat">
             <h2>{chatroom.name}</h2>
             <button onClick={handleDeleteButton}>Delete</button>
             <MessageList messages={messages}/>
             <MessageForm postMessage={postMessage} chatroom={chatroom} activeUser={activeUser}/>
             <UserList users={users}/>
+            </div>
 
         </>
     );

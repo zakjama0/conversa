@@ -35,24 +35,26 @@ const Register = ({users, registerUser}) => {
 
   return(
     <>
+    <div className = "register">
       <h2>Sign up!</h2>
       <form onSubmit={handleSubmit}>
-        <input 
+        <input className="name"
           type="text"
           name="username"
           placeholder="Enter username"
           value={username}
           onChange={ (event) => setUsername(event.target.value) }
         />
-        <input 
+        <input className="email"
           type="email"
           name="email"
           placeholder="Enter email address"
           value={email}
           onChange={ (event) => setEmail(event.target.value)}
         />
-        <input type="submit" value="Submit"/>
+        <input className = "submit" type="submit" value="Sign Up"/>
       </form>
+      </div>
     </>
   );
 };

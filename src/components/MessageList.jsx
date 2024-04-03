@@ -10,8 +10,12 @@ const MessageList = ({ messages }) => {
 
     return (
         <>
+        <div className = "messageList">
             <h3>Messages</h3>
+            <div className="mappedMessages">
             {mappedMessage}
+            </div>
+            </div>
 
         </>);
 }
