@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { userState } from "../container/ChatContainer";
 const Login = (users) => {
     const [loggedUsername, setLoggedUsername] = useState("")
-    const [activeUser, setActiveUser] = useState({});
+    const context = useContext(userState)
+    const {activeUser, setActiveUser} = context;
+    // const [activeUser, setActiveUser] = useState({});
     console.log(users);
 
     const filteredUser = users.users.filter((user) => 
