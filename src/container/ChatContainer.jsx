@@ -6,8 +6,9 @@ import Login from "../components/Login";
 export const userState = React.createContext(); 
 
 const ChatContainer = () => {
-   const [activeUser, setActiveUser] = useState([]);
+   const [activeUser, setActiveUser] = useState({});
    const [chatrooms, setChatrooms] = useState([]);
+   const [users, setUsers] = useState ([]);
 
    const fetchChatroom = async () =>{
     const response = await fetch('http://localhost:8080/chatrooms')
@@ -20,12 +21,18 @@ const ChatContainer = () => {
     const data = await response.json()
     setUsers(data)
    }
+
+   const fetchUser = async () =>{
+    const response = await fetch('http://localhost:8080/users/2')
+    const data = await response.json()
+    setActiveUser(data)
+   }
  
 
    useEffect(() =>{
     fetchChatroom()
     fetchUsers()
-    console.log(users)
+    fetchUser()
    }, [])
 
 
