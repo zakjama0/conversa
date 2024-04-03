@@ -6,6 +6,7 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 import Navigation from "../components/Navigation";
 
+
 export const userState = React.createContext();
 
 const ChatContainer = () => {
@@ -58,6 +59,11 @@ const ChatContainer = () => {
         setChatrooms(chatrooms.filter((chatroom) => chatroom.id !== chatroomId))
     }
 
+    const chatroomLoader = ({params}) => {
+        return chatrooms.find(chatroom => {
+            return chatroom.id === parseInt(params.id);
+        });
+    }
 
     const chatRoutes = createBrowserRouter([
         {
@@ -73,20 +79,31 @@ const ChatContainer = () => {
                     path: "/chatrooms",
                     element: <ChatList
                         chatrooms={chatrooms}
-                        deleteChatroom={deleteChatroom} />
+                        deleteChatroom={deleteChatroom} />,
+                    children: [
+                        {
+                        path: "/chatrooms/new",
+                        element: <ChatForm
+                            chatrooms={chatrooms}
+                            postChatrooms={postChatrooms} />
+                    },
+
+                    {
+                        path:"/chatrooms/:id",
+                        loader: chatroomLoader,
+                        element: <Chat 
+                        chatroom = {chatroom}
+                        deleteChatroom = {deleteChatroom}
+                        />
+                    }
+                ]
+                 
                 },
-                {
-                    path: "/chatrooms/new",
-                    element: <ChatForm
-                        chatrooms={chatrooms}
-                        postChatrooms={postChatrooms} />
-                },
+                
                 {
                     path: "/register",
                     element: <Register users={users} registerUser={registerUser} />
                 }
-
-
             ]
 
         }
@@ -106,5 +123,6 @@ const ChatContainer = () => {
         </>
     );
 }
+
 
 export default ChatContainer;

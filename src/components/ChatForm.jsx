@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 const ChatForm = ({ chatrooms, postChatrooms }) => {
 
     const [stateChatroom, setStateChatroom] = useState(

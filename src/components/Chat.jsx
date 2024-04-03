@@ -47,7 +47,6 @@ const Chat = ({ chatroom, deleteChatroom }) => {
                 <MessageForm postMessage={postMessage} chatroom={chatroom} activeUser={activeUser} />
                 <UserList users={users} />
             </div>
-
         </>
     );
 }
