@@ -455,6 +455,21 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 
 }
 
+ .image {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .image button{
+  border-radius:10px;
+ }
+
+.image img{
+  width: 150px;
+  height: 100 px;
+  border-radius: 25px;
+}
+
 /* Chat Form */
 /* ==============*/
 

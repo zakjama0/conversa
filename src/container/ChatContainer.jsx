@@ -16,6 +16,7 @@ const ChatContainer = () => {
     const [users, setUsers] = useState([]);
     const [activeUser, setActiveUser] = useState({});
     const [chatrooms, setChatrooms] = useState([]);
+    const [image, setImage] = useState ([]);
     
 
     const fetchChatroom = async () => {
@@ -30,16 +31,19 @@ const ChatContainer = () => {
         setUsers(data)
     }
 
+    // const fetchImage = async () => {
+    //     const response = await fetch('https://huggingface.co/Cletrason/toad-in-the-mario-movie')
+    //     const data = await response.json()
+    //     setImage(data)
+    // }
+
 
     useEffect(() => {
         fetchChatroom()
         fetchUsers()
+        // fetchImage()
         console.log(users)
     }, [])
-
-    // const registerUser = (newUser) => {
-    //     setUsers([...users, newUser]);
-    // }
 
     const postChatrooms = async (newChatroom) => {
 
