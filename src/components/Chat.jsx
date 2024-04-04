@@ -33,13 +33,14 @@ const Chat = ({  deleteChatroom }) => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newMessage)
         })
-        const savedNewMessage = await response.json();
-        setMessages([...messages, savedNewMessage]);
+        const data = await response.json();
+        setMessages([...messages, data]);
+       
     }
 
     useEffect(() => {
         fetchMessages();
-    }, [chatroom])
+    }, [chatroom, messages])
 
     return (
         <>

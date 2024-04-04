@@ -25,6 +25,11 @@ const Register = ({ users, registerUser }) => {
       validation = false;
     }
 
+    if (users.find(user => user.email === email)) {
+      alert("Email already exists");
+      validation = false;
+    }
+
     if (username === "" || email === "") {
       alert("Please fill in all fields")
       validation = false;
