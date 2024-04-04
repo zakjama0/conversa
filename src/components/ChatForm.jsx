@@ -2,7 +2,7 @@
 import { useState} from "react";
 import { useNavigate } from "react-router-dom";
 
-const ChatForm = ({ chatrooms, postChatrooms }) => {
+const ChatForm = ({postChatrooms }) => {
 
     const [stateChatroom, setStateChatroom] = useState(
         {

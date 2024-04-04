@@ -4,7 +4,9 @@ import MessageForm from "./MessageForm";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import UserListForm from "./UserListForm";
 
+
 const Chat = ({ deleteChatroom }) => {
+
     const [messages, setMessages] = useState([]);
     const [users, setUsers] = useState([]);
     const chatroom = useLoaderData();
@@ -46,8 +48,8 @@ const Chat = ({ deleteChatroom }) => {
                 <h2>{chatroom.name}</h2>
                 <button onClick={handleDeleteButton}>Delete</button>
                 <MessageList messages={messages} />
+
                 <MessageForm postMessage={postMessage} chatroom={chatroom} />
-                {/* <UserList users={users} /> */}
                 <UserListForm users={users} />
             </div>
         </>
