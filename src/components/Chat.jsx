@@ -50,7 +50,6 @@ const Chat = ({ deleteChatroom }) => {
                 <MessageList messages={messages} />
                 <MessageForm postMessage={postMessage} chatroom={chatroom}/>
                 <UserList users={users} />
-
             </div>
         </>
     );
