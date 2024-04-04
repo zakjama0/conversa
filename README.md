@@ -72,3 +72,11 @@ The backend API utilizes ``` https://github.com/sahilpatel1906/Conversa_API ```
 | Register - Sign up Form                        | Create a form to create a new user                             |
 | CSS                                            | Styling language used to define the presentation of a document |
 
+
+<a id="component-diagram"></a>
+### Component Diagram 
+
+<a id="wireframe"></a>
+### Wireframe 
+![image](https://github.com/zakjama0/conversa/assets/99983599/677ea419-c4e8-4629-8f4f-fedf7f05df83)
+
