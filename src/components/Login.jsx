@@ -8,20 +8,27 @@ const Login = ({ users }) => {
     const { activeUser, setActiveUser } = context;
     const navigate = useNavigate();
 
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
         const filteredUser = users.find((user) =>
-            user.username.toLowerCase() === loggedUsername.toLowerCase()
+            user.username.toLowerCase() === loggedUsername.toLowerCase(),
+            
         );
 
         if (!filteredUser) {
             alert("Please Sign Up")
-            e.target.reset();
+            event.target.reset();
+            return;
+        } 
+
+        if (filteredUser.email !== event.target.email.value.toLowerCase()) {
+            alert("Incorrect login details");
+            event.target.reset();
             return;
         }
 
         setActiveUser(filteredUser);
-        e.target.reset();
+        event.target.reset();
         navigate("/chatrooms");
     }
 
