@@ -11,13 +11,15 @@ const ChatList = ({ chatrooms }) => {
         //     key={index}
         //     deleteChatroom={deleteChatroom} />
        
-        return <button onClick={ () => navigate(`${chatroom.id}`)}>{chatroom.name}</button>
+        return <button onClick={ () => navigate(`${chatroom.id}`)} >{chatroom.name}</button>
+        
     })
      
     return (
         <>
             <div className="chatList">
                 <h1>Chatroom List</h1>
+                <button onClick={() => navigate("/chatrooms/new")}>+</button>
                 <div className="mappedChats">
                     {mapChatList}
                 </div>

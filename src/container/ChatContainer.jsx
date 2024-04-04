@@ -97,7 +97,8 @@ const ChatContainer = () => {
                                 path:"/chatrooms/:id",
                                 loader: chatroomLoader,
                                 element: <Chat deleteChatroom={deleteChatroom}/>
-                            }
+                            },
+    
                         ]
                 },
                 {
