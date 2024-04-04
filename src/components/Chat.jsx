@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react"
 import MessageList from "./MessageList"
 import MessageForm from "./MessageForm";
-import UserList from "./UserList";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import UserListForm from "./UserListForm";
 
 
-const Chat = ({  deleteChatroom }) => {
-   
+const Chat = ({ deleteChatroom }) => {
+
     const [messages, setMessages] = useState([]);
     const [users, setUsers] = useState([]);
     const chatroom = useLoaderData();
@@ -35,7 +35,7 @@ const Chat = ({  deleteChatroom }) => {
         })
         const data = await response.json();
         setMessages([...messages, data]);
-       
+
     }
 
     useEffect(() => {
@@ -48,9 +48,9 @@ const Chat = ({  deleteChatroom }) => {
                 <h2>{chatroom.name}</h2>
                 <button onClick={handleDeleteButton}>Delete</button>
                 <MessageList messages={messages} />
-                <MessageForm postMessage={postMessage} chatroom={chatroom}/>
-                <UserList users={users} />
 
+                <MessageForm postMessage={postMessage} chatroom={chatroom} />
+                <UserListForm users={users} />
             </div>
         </>
     );

@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
-const Register = ({ users, registerUser }) => {
+import { userState } from "../container/ChatContainer";
+import {useNavigate } from "react-router-dom"
 
+const Register = ({ users, registerUser }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-
+  const navigate = useNavigate();
+  const context = useContext(userState)
+  const { setActiveUser } = context;
   const handleSubmit = (event) => {
     event.preventDefault();
     if (handleValidation()) {
@@ -12,7 +16,9 @@ const Register = ({ users, registerUser }) => {
         username,
         email,
       }
+      setActiveUser(newUser);
       registerUser(newUser);
+      navigate("/login");
       return;
     }
   }
