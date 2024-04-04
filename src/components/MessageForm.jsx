@@ -1,6 +1,10 @@
-import React, { useState } from "react";
+import { useState, useContext } from "react";
+import { userState } from "../container/ChatContainer";
 
-const MessageForm = ({ postMessage, chatroom, activeUser }) => {
+const MessageForm = ({ postMessage, chatroom }) => {
+    const context = useContext(userState)
+    const { activeUser } = context;
+
     const [stateMessage, setStateMessage] = useState(
         {
             userId: activeUser.id,

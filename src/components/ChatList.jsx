@@ -1,12 +1,19 @@
 import Chat from "./Chat";
-const ChatList = ({ chatrooms, getAllChatrooms, getChatroomById, updateChatroom, deleteChatroom }) => {
-    const mapChatList = chatrooms.map((chatroom, index) => {
-        return <Chat
-            chatroom={chatroom}
-            key={index}
-            deleteChatroom={deleteChatroom} />
-    })
+import {  useNavigate, Outlet } from "react-router-dom";
 
+const ChatList = ({ chatrooms }) => {
+  
+    const navigate = useNavigate();
+
+    const mapChatList = chatrooms.map((chatroom, index) => {
+        // return <Chat
+        //     chatroom={chatroom}
+        //     key={index}
+        //     deleteChatroom={deleteChatroom} />
+       
+        return <button onClick={ () => navigate(`${chatroom.id}`)}>{chatroom.name}</button>
+    })
+     
     return (
         <>
             <div className="chatList">
@@ -15,6 +22,7 @@ const ChatList = ({ chatrooms, getAllChatrooms, getChatroomById, updateChatroom,
                     {mapChatList}
                 </div>
             </div>
+            <Outlet />
         </>
     );
 }

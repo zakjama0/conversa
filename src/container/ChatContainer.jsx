@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import ChatList from "../components/ChatList";
 import ChatForm from "../components/ChatForm";
+import Chat from "../components/Chat";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import Navigation from "../components/Navigation";
 import Welcome from "../components/Welcome"
+
 
 export const userState = React.createContext();
 
@@ -59,6 +61,11 @@ const ChatContainer = () => {
         setChatrooms(chatrooms.filter((chatroom) => chatroom.id !== chatroomId))
     }
 
+    const chatroomLoader = ({params}) => {
+        return chatrooms.find(chatroom => {
+            return chatroom.id === parseInt(params.id);
+        });
+    }
 
     const chatRoutes = createBrowserRouter([
         {
@@ -76,33 +83,35 @@ const ChatContainer = () => {
                         users={users} />
                 },
                 {
-                    path: "/chatrooms",
-                    element: <ChatList
-                        chatrooms={chatrooms}
-                        deleteChatroom={deleteChatroom} />
-                },
-                {
                     path: "/chatrooms/new",
                     element: <ChatForm
                         chatrooms={chatrooms}
                         postChatrooms={postChatrooms} />
                 },
                 {
+                    path: "/chatrooms",
+                    element: <ChatList
+                        chatrooms={chatrooms}/>,
+                        children: [
+                            {
+                                path:"/chatrooms/:id",
+                                loader: chatroomLoader,
+                                element: <Chat deleteChatroom={deleteChatroom}/>
+                            }
+                        ]
+                },
+                {
                     path: "/register",
                     element: <Register users={users} registerUser={registerUser} />
                 }
-
-
             ]
-
         }
-
     ])
 
     return (
         <>
             <div className="container">
-                <userState.Provider value={{ activeUser, setActiveUser }}>
+                <userState.Provider value={{ activeUser:activeUser, setActiveUser:setActiveUser }}>
                     {/* <Login users={users} />
                 <ChatList chatrooms={chatrooms} deleteChatroom={deleteChatroom} />
                 <ChatForm chatrooms={chatrooms} postChatrooms={postChatrooms} /> */}
@@ -112,5 +121,6 @@ const ChatContainer = () => {
         </>
     );
 }
+
 
 export default ChatContainer;
