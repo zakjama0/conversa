@@ -51,6 +51,18 @@ Conversa is built on the following technologies:
 - **HTML**: The standard markup language for creating web pages.
 - **CSS**: For styling and presenting the content elegantly.
 
+React Libraries Used:
+- react-router-dom
+- useState
+- useContext
+- useEffect
+- Link
+- Outlet
+- useNavigate
+- useLoaderData
+- createBrowserRouter
+- RouterProvider 
+
 The backend API utilizes ``` https://github.com/sahilpatel1906/Conversa_API ```
 
 
