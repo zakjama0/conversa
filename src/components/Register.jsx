@@ -36,6 +36,19 @@ const Register = ({ users, registerUser }) => {
   return (
     <>
       <div className="register">
+      <section class="stars">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+       </section>
+       <div className="main-login">
         <h2>Sign up!</h2>
         <form onSubmit={handleSubmit}>
           <input className="name"

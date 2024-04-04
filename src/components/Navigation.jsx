@@ -25,6 +25,7 @@ const Navigation = () => {
 
                      <div className="navLinks">
                      <li><Link to="/register" onClick={refreshActiveUser}>Sign Out</Link></li>
+                     <li><Link to="/chatrooms">Chatrooms</Link></li>
                      </div>
                      :
                      <div className="navLinks">
