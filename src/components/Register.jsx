@@ -53,7 +53,6 @@ const Register = ({ users, registerUser }) => {
                 <span></span>
                 <span></span>
        </section>
-       <div className="main-login"> </div>
         <h2>Sign up!</h2>
         <form onSubmit={handleSubmit}>
           <input className="name"
