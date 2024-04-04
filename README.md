@@ -1,7 +1,7 @@
 
 # Conversa
 
- AHHHHHHHHH
+ Team: AHHHHHHHHH
 "Echoes of Toad's cry unite in the rallying call: AHHH, the symphony of our camaraderie."
 
 ## Table of Contents
@@ -93,7 +93,7 @@ The backend API utilizes ``` https://github.com/sahilpatel1906/Conversa_API ```
 
 <a id="wireframe"></a>
 ### Wireframe 
-
+![image](https://github.com/zakjama0/conversa/assets/99983599/7affd43b-1acd-4d28-bfce-e5fdbc76c595)
 
 <a id="component-diagram"></a>
 ### Component Diagram 
