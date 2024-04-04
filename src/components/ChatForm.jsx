@@ -32,6 +32,7 @@ const ChatForm = ({postChatrooms }) => {
         <>
             <div className="chatForm">
                 <form onSubmit={handleFormSubmit}>
+                    <div className="input-box">
                     <label htmlFor="chatName"></label>
                     <input
                         id="chatName"
@@ -42,6 +43,8 @@ const ChatForm = ({postChatrooms }) => {
                         value={stateChatroom.name}
                     />
                     <input className="create" type="submit" value="+" />
+                    </div>
+                    
                 </form>
             </div>
         </>
