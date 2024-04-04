@@ -9,6 +9,7 @@
 7. [Extension](#extension)
 8. [Component Diagram](#component-diagram)
 9. [Wireframe](#wireframe)
+10. [Credits and Acknowledgements](#credits)
 
 <a id="introduction"></a>
 ### Introduction
@@ -80,3 +81,10 @@ The backend API utilizes ``` https://github.com/sahilpatel1906/Conversa_API ```
 ### Wireframe 
 ![image](https://github.com/zakjama0/conversa/assets/99983599/677ea419-c4e8-4629-8f4f-fedf7f05df83)
 
+
+<a id="credits"></a>
+### Credits and Acknowledgements 
++ Birindar Bahia (https://github.com/BirindarK)
++ Monesha Dhali (https://github.com/moneshadhali)
++ Saba Kia (https://github.com/sabaki4)
++ Zakaria Jama (https://github.com/zakjama0)
