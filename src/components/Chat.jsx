@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import MessageList from "./MessageList"
 import MessageForm from "./MessageForm";
-import UserList from "./UserList";
 import { useLoaderData, useNavigate } from "react-router-dom";
+import UserListForm from "./UserListForm";
 
 
 const Chat = ({  deleteChatroom }) => {
@@ -49,8 +49,8 @@ const Chat = ({  deleteChatroom }) => {
                 <button onClick={handleDeleteButton}>Delete</button>
                 <MessageList messages={messages} />
                 <MessageForm postMessage={postMessage} chatroom={chatroom}/>
-                <UserList users={users} />
-
+                {/* <UserList users={users} /> */}
+                <UserListForm  users={users}/>
             </div>
         </>
     );
