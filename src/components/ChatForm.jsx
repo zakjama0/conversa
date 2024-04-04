@@ -1,4 +1,7 @@
-import { useState } from "react";
+
+import { useState} from "react";
+import { useNavigate } from "react-router-dom";
+
 const ChatForm = ({ chatrooms, postChatrooms }) => {
 
     const [stateChatroom, setStateChatroom] = useState(
@@ -6,6 +9,7 @@ const ChatForm = ({ chatrooms, postChatrooms }) => {
             name: ''
         }
     )
+    const navigate = useNavigate();
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
@@ -14,6 +18,7 @@ const ChatForm = ({ chatrooms, postChatrooms }) => {
         setStateChatroom({
             name: ""
         })
+        navigate("/chatrooms");
     }
 
     const handleChange = (event) => {
