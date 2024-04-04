@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const UserListForm = ({users}) => {
+const UserListForm = ({ users }) => {
     const [open, setOpen] = useState(false);
     const mappedUsers = users.map((user, index) => {
         return <p key={index}>{user}</p>
@@ -10,16 +10,16 @@ const UserListForm = ({users}) => {
         setOpen(!open);
     };
 
-    return ( 
+    return (
         <div>
             <button onClick={toggle}>View User List</button>
             {open && (
-            <div className="toggle">
-                {mappedUsers}
-            </div>
+                <div className="toggle">
+                    {mappedUsers}
+                </div>
             )}
         </div>
     );
 }
- 
+
 export default UserListForm;
