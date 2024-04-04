@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import Navigation from "../components/Navigation";
+import Welcome from "../components/Welcome"
 
 
 export const userState = React.createContext();
@@ -71,6 +72,11 @@ const ChatContainer = () => {
             path: "/",
             element: <Navigation />,
             children: [
+                {
+                    path: "/home",
+                    element: <Welcome
+                    />
+                },
                 {
                     path: "/login",
                     element: <Login
