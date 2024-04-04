@@ -288,12 +288,6 @@ animation-duration: 3s;
   text-decoration: underline;
 }
 
-
-/* ------------------------------------------------------------------------------------- */
-
-/* Navigation */
-/* ==============*/
-
 header{
   top: 0;
   padding: 20px;
@@ -350,31 +344,6 @@ nav ul li a:hover{
   color: red;
 }
 
-nav {
-
-}
-
-ul {
-
-}
-
-li {
- 
-}
-
-
-
-
-
-
-/* ------------------------------------------------------------------------------------- */
-
-/* CHATS*/
-
-
-/* Chat */
-/* ==============*/
-
  .chat {
 background-color: #3e92cc;
 width: 1050px;
@@ -423,6 +392,11 @@ float:right;
   font-size: 14.5px;
 
 }
+.mappedChats{
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+}
 
 
 
@@ -441,60 +415,6 @@ text-align: center;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
- 
-
-/* Chat List */
-/* ==============*/
-
- .chatList {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr; */
-}
-
-.mappedChats {
-
-}
-
- .image {
-  display: flex;
-  flex-direction: column;
- }
-
- .image button{
-  border-radius:10px;
- }
-
-.image img{
-  width: 150px;
-  height: 100 px;
-  border-radius: 25px;
-}
-
-/* Chat Form */
-/* ==============*/
-
-/* .chatForm {
-
-}
-
-form {
-
-}
-
-#chatName {
-
-}
-
-.create {
-
-} */
-
-/* ------------------------------------------------------------------------------------- */
-
-/* MESSAGES */
-
-/* Message */
-/* ==============*/
 .message{
   background-color: blue;
   border: white;
@@ -514,28 +434,19 @@ form {
   color: white;
   float: right;
 }
+.messageList{
+
+}
 
 
 
 .sender {
 
-} */
+} 
 
-/* Message List */
-/* ==============*/
-/* .messageList {
-
-}
-
-.mappedMessages {
-
-} */
-
-/* Message Form */
-/* ==============*/
 
  .messageForm {
-
+padding: 10px;
 }
 
 #userMessage {
@@ -547,26 +458,3 @@ form {
 }
 
 
-/* ------------------------------------------------------------------------------------- */
-
-/* USERS */
-
-/* User */
-/* ==============*/
-
-/* .user {
-
-} */
-
-/* User List */
-/* ==============*/
-
- /* .userList {
-
-}
-
-.mappedUsers {
-
-} */
-
-/* ------------------------------------------------------------------------------------- */
