@@ -11,7 +11,7 @@ const ChatList = ({ chatrooms }) => {
         //     key={index}
         //     deleteChatroom={deleteChatroom} />
        
-        return <button onClick={ () => navigate(`${chatroom.id}`)} >{chatroom.name}</button>
+        return <button onClick={ () => navigate(`${chatroom.id}`)} key={index}>{chatroom.name}</button>
         
     })
      
