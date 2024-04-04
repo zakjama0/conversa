@@ -28,28 +28,61 @@ const Login = ({ users }) => {
 
     return (
         <>
-            <div className="register">
-                <form onSubmit={handleFormSubmit}>
-                    <label htmlFor="login-name">Username:</label>
-                    <input
-                        id="username"
-                        name="username"
-                        type="text"
-                        value={loggedUsername}
-                        onInput={(e) => setLoggedUsername(e.target.value)}
-                        placeholder="Enter username.."
-                    />
-
-                    <label htmlFor="login-email">Email:</label>
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="Enter email.."
-                    />
-                    <input className="loginUser" type="submit" value="Login" />
-                </form>
-                <h1>Welcome back! Please login</h1>
+            <div className="login">
+            <section class="stars">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </section>
+            <div className="main-login">
+            <h1>Welcome back! Please login</h1>
+                <div className="wrapper">
+                    <div className="wrap">
+                        <form onSubmit={handleFormSubmit}>
+                            
+                            <div className="input-box">
+                            <label htmlFor="login-name">Username:</label>
+                            <input
+                                    id="username"
+                                    name="username"
+                                    type="text"
+                                    value={loggedUsername}
+                                    onInput={(e) => setLoggedUsername(e.target.value)}
+                                    placeholder="Enter username.."
+                                />
+                            </div>
+                            
+                            <div className="input-box">
+                            <label htmlFor="login-email">Email:</label>
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="Enter email.."
+                                />
+                            </div>
+                            <div class="remember-forgot">
+                                <label for="">
+                                    <input type="checkbox" name="" id=""/> Remember Me</label>
+                            </div>
+                            <div class="register-link">
+                                <p> Dont have an account? <Link to="/register" className="register">Register</Link></p>
+                            </div>
+                            
+                            <input className="btn" type="submit" value="Login" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+ 
                 <Outlet />
             </div>
         </>
