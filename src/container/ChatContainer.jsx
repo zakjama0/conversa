@@ -88,9 +88,8 @@ const ChatContainer = () => {
             element: <Navigation />,
             children: [
                 {
-                    path: "/home",
-                    element: <Welcome
-                    />
+                    path: "",
+                    element: <Welcome/>
                 },
                 {
                     path: "/login",

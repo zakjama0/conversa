@@ -41,7 +41,7 @@ const MessageForm = ({ postMessage, chatroom }) => {
                     placeholder="Type here"
                     onChange={handleChange}
                     value={stateMessage.message} />
-                <input className="send" type="submit" value="Send" />
+                <input className="btn" type="submit" value="Send" />
             </form>
         </div>
     )

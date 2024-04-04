@@ -44,14 +44,22 @@ const Chat = ({ deleteChatroom }) => {
 
     return (
         <>
-            <div className="chat">
-                <h2>{chatroom.name}</h2>
-                <button onClick={handleDeleteButton}>Delete</button>
-                <MessageList messages={messages} />
+            
+                <div className="wrapper">
+                <div className="wrap">
+                    <h2>{chatroom.name}</h2>
+                    <UserListForm users={users} />
+                    <button onClick={handleDeleteButton}>Delete</button>
+                    <MessageList messages={messages} />
 
-                <MessageForm postMessage={postMessage} chatroom={chatroom} />
-                <UserListForm users={users} />
-            </div>
+                    <MessageForm postMessage={postMessage} chatroom={chatroom} />
+                    </div>
+                </div>
+                    
+                
+                
+                
+            
         </>
     );
 }
