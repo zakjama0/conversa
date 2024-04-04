@@ -7,9 +7,9 @@
 3. [Tech Stack](#tech-stack)
 4. [MVP](#mvp)
 7. [Extension](#extension)
-8. [Component Diagram](#component-diagram)
-9. [Wireframe](#wireframe)
-10. [Credits and Acknowledgements](#credits)
+8. [Wireframe](#wireframe)
+9. [Component Diagram](#component-diagram)
+11. [Credits and Acknowledgements](#credits)
 
 <a id="introduction"></a>
 ### Introduction
@@ -73,14 +73,13 @@ The backend API utilizes ``` https://github.com/sahilpatel1906/Conversa_API ```
 | Register - Sign up Form                        | Create a form to create a new user                             |
 | CSS                                            | Styling language used to define the presentation of a document |
 
-
-<a id="component-diagram"></a>
-### Component Diagram 
-
 <a id="wireframe"></a>
 ### Wireframe 
 ![image](https://github.com/zakjama0/conversa/assets/99983599/677ea419-c4e8-4629-8f4f-fedf7f05df83)
 
+<a id="component-diagram"></a>
+### Component Diagram 
+![image](https://github.com/zakjama0/conversa/assets/99983599/ce87346c-abe9-4dfd-8e77-f2d4b70fb9e9)
 
 <a id="credits"></a>
 ### Credits and Acknowledgements 
