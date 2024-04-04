@@ -408,6 +408,21 @@ float:right;
 
 }
 
+ .image {
+  display: flex;
+  flex-direction: column;
+ }
+
+ .image button{
+  border-radius:10px;
+ }
+
+.image img{
+  width: 150px;
+  height: 100 px;
+  border-radius: 25px;
+}
+
 /* Chat Form */
 /* ==============*/
 
