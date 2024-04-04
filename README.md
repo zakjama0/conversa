@@ -84,7 +84,7 @@ The backend API utilizes ``` https://github.com/sahilpatel1906/Conversa_API ```
 
 <a id="credits"></a>
 ### Credits and Acknowledgements 
-+ Birindar Bahia (https://github.com/BirindarK)
-+ Monesha Dhali (https://github.com/moneshadhali)
-+ Saba Kia (https://github.com/sabaki4)
-+ Zakaria Jama (https://github.com/zakjama0)
++ Birindar Bahia - Github (https://github.com/BirindarK)
++ Monesha Dhali - Github (https://github.com/moneshadhali)
++ Saba Kia - Github (https://github.com/sabaki4)
++ Zakaria Jama - Github (https://github.com/zakjama0)
