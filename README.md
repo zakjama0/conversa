@@ -19,6 +19,7 @@ Conversa is a web application designed to facilitate communication between users
 <a id="installation"></a>
 ### Installation Instruction
 
+Front-End Installation
 1. Clone the Repository to the user local machine using Git. The user can do this in the terminal or command prompt and running the following command:
     ```
     git clone <repository_url>
@@ -31,15 +32,17 @@ Conversa is a web application designed to facilitate communication between users
     ```
     npm install
     ```
-4. Download the Backend of this project using the following link - installation instructions included in (``` https://github.com/sahilpatel1906/Conversa_API ```)
-5. Start the backend application in any IDE / terminal
-6. Start the Development Server: Once the dependencies are installed, the user can start the development server by running:
+4. Start the Development Server: Once the dependencies are installed, the user can start the development server by running:
     ```
     npm start
     ```
 This command will start a local development server and open the React app in a web browser. The user can then view and interact with the app.
 
-
+Back-End Installation
+1. Download the Backend of this project using the following link - installation instructions included in (``` https://github.com/sahilpatel1906/Conversa_API ```)
+2. Start and Run the backend application in any Java IDE / terminal
+3. Remember to install both Front-End and Back-End in the same directory! And have both applications running :)
+   
 <a id="tech-stack"></a>
 ## Tech Stack
 
@@ -75,7 +78,7 @@ The backend API utilizes ``` https://github.com/sahilpatel1906/Conversa_API ```
 
 <a id="wireframe"></a>
 ### Wireframe 
-![image](https://github.com/zakjama0/conversa/assets/99983599/677ea419-c4e8-4629-8f4f-fedf7f05df83)
+
 
 <a id="component-diagram"></a>
 ### Component Diagram 
