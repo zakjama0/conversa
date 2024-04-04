@@ -1,16 +1,11 @@
-import Chat from "./Chat";
 import {  useNavigate, Outlet } from "react-router-dom";
 
 const ChatList = ({ chatrooms }) => {
   
     const navigate = useNavigate();
 
-    const mapChatList = chatrooms.map((chatroom, index) => {
-        // return <Chat
-        //     chatroom={chatroom}
-        //     key={index}
-        //     deleteChatroom={deleteChatroom} />
-       
+    const mapChatList = chatrooms.map((chatroom) => {
+      
         return <button onClick={ () => navigate(`${chatroom.id}`)} >{chatroom.name}</button>
         
     })

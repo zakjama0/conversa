@@ -5,7 +5,7 @@ import UserList from "./UserList";
 import { useLoaderData, useNavigate } from "react-router-dom";
 
 
-const Chat = ({  deleteChatroom }) => {
+const Chat = ({ deleteChatroom }) => {
    
     const [messages, setMessages] = useState([]);
     const [users, setUsers] = useState([]);

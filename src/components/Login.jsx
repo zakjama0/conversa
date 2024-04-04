@@ -3,9 +3,8 @@ import { userState } from "../container/ChatContainer";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 const Login = ({ users }) => {
     const [loggedUsername, setLoggedUsername] = useState("")
-    const [loggedEmail, setLoggedEmail] = useState("")
     const context = useContext(userState)
-    const { activeUser, setActiveUser } = context;
+    const { setActiveUser } = context;
     const navigate = useNavigate();
 
     const handleFormSubmit = (event) => {

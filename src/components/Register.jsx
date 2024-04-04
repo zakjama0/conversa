@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { userState } from "../container/ChatContainer";
-import { Link, Outlet, useNavigate } from "react-router-dom"
+import {useNavigate } from "react-router-dom"
 
 
 const Register = ({ users, registerUser }) => {
