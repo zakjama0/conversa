@@ -1,390 +1,407 @@
  @import url('https://fonts.cdnfonts.com/css/new-super-mario-font-u');
-              
- *{
-  padding: 0;
-  margin: 0;
-}
 
-body {
-  background-image: url('images/mario\ background\ image.jpeg');
-  background-repeat: no-repeat;
-}
+ * {
+   padding: 0;
+   margin: 0;
+ }
 
-.Welcome {
-  padding: 0;
-  margin: 0;
-  height: 100vh;
-  width: 100%;
-  font-size: 30px;
-  text-align: center;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  font-family: 'New Super Mario Font U', sans-serif;
-                                               
-}
+ body {
+   background-image: url('images/mario\ background\ image.jpeg');
+   background-repeat: no-repeat;
+ }
 
-button {
-  border-radius: 10px;
-}
+ .Welcome {
+   padding: 0;
+   margin: 0;
+   height: 100vh;
+   width: 100%;
+   font-size: 30px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: white;
+   font-family: 'New Super Mario Font U', sans-serif;
 
-input {
-margin: 5px;
-}
+ }
 
-form {
-  padding-bottom: 20px;
-}
+ button {
+   border-radius: 10px;
+ }
 
-.stars{
-  position: absolute;
-  left: 10%; 
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
+ input {
+   margin: 5px;
+ }
 
-span{
-position: absolute;
-top: 50%;
-left: 50%;
-width: 4px;
-height: 4px;
-background: #fff;
-border-radius:50%;
-box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1),0 0 20px rgba(255, 255, 255, 1);
-animation: animate 3s linear infinite;
-z-index: -1;
-}
+ form {
+   padding-bottom: 20px;
+ }
 
-span::before{
-content: '';
-position: absolute;
-top: 50%;
-width: 300px;
-height: 1px;
-background: linear-gradient(90deg, #fff, transparent);
-transform: translateY(-50%);
-}
+ .stars {
+   position: absolute;
+   left: 10%;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+ }
 
-@keyframes animate{
-0%{
-  transform: rotate(315deg) translateX(0);
-  opacity: 1;
-}
-70%{
-  opacity: 1;
-}
-100%{
-  transform: rotate(315deg) translateX(-1000px);
-  opacity: 0;
-}
-}
+ span {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 4px;
+   height: 4px;
+   background: #fff;
+   border-radius: 50%;
+   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
+   animation: animate 3s linear infinite;
+   z-index: -1;
+ }
 
-span:nth-child(1)
-{
-top: -80%;
-right: 0;
-left:initial;
-animation-delay: 1s;
-animation-duration: 3s;
-} 
-span:nth-child(2)
-{
-top: -30%;
-right: 0%;
-left:initial;
-animation-delay: 1s;
-animation-duration: 3s;
-} 
+ span::before {
+   content: '';
+   position: absolute;
+   top: 50%;
+   width: 300px;
+   height: 1px;
+   background: linear-gradient(90deg, #fff, transparent);
+   transform: translateY(-50%);
+ }
 
-span:nth-child(3)
-{
-top: -60%;
-right: 0%;
-left:initial;
-animation-delay: 1s;
-animation-duration: 3s;
-}
+ @keyframes animate {
+   0% {
+     transform: rotate(315deg) translateX(0);
+     opacity: 1;
+   }
 
-span:nth-child(4)
-{
-top: -90%;
-right: 0%;
-left:initial;
-animation-delay: 2s;
-animation-duration: 3s;
-}
-.main-login{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
+   70% {
+     opacity: 1;
+   }
 
-.wrapper{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  min-height: 75vh;
-  color: white;
-}
+   100% {
+     transform: rotate(315deg) translateX(-1000px);
+     opacity: 0;
+   }
+ }
 
-.wrap{
-  width: 480px ;
-  background-image:  linear-gradient(rgb(67, 166, 232) , rgb(87, 177, 87));
-  border: 2px solid lightblue ;
-  backdrop-filter: blur;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  color: white;
-  border-radius: 10px ;
-  padding: 30px 40px;
-}
+ span:nth-child(1) {
+   top: -80%;
+   right: 0;
+   left: initial;
+   animation-delay: 1s;
+   animation-duration: 3s;
+ }
 
-.wrap h1{
-  font-size: 36px;
-  text-align: center;
-}
-.wrap .input-box{
-  position: relative;
-  width: 85%;
-  height: 50%;
-  margin: 30px 0;
-}
+ span:nth-child(2) {
+   top: -30%;
+   right: 0%;
+   left: initial;
+   animation-delay: 1s;
+   animation-duration: 3s;
+ }
 
-.input-box input{
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  border: 2px solid white;
-  border-radius: 40px;
-  font-size: 16px;
-  color: #fff;
-  padding: 20px 45px 20px 20px;
-}
+ span:nth-child(3) {
+   top: -60%;
+   right: 0%;
+   left: initial;
+   animation-delay: 1s;
+   animation-duration: 3s;
+ }
 
-.input-box input::placeholder{
-  color: #fff;
-}
+ span:nth-child(4) {
+   top: -90%;
+   right: 0%;
+   left: initial;
+   animation-delay: 2s;
+   animation-duration: 3s;
+ }
 
-.input-box i{
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 14.5px;
+ .main-login {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+ }
 
-}
-.register a:hover{
-  transform: scale(1.05);
-  transition: 0.5s;
-  color: red;
-}
+ .wrapper {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   min-height: 75vh;
+   color: white;
+ }
+
+ .wrap {
+   width: 480px;
+   background-image: linear-gradient(rgb(67, 166, 232), rgb(87, 177, 87));
+   border: 2px solid lightblue;
+   backdrop-filter: blur;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   color: white;
+   border-radius: 10px;
+   padding: 30px 40px;
+ }
+
+ .wrap h1 {
+   font-size: 36px;
+   text-align: center;
+ }
+
+ .wrap .input-box {
+   position: relative;
+   width: 85%;
+   height: 50%;
+   margin: 30px 0;
+ }
+
+ .input-box input {
+   width: 100%;
+   height: 100%;
+   background: transparent;
+   border: none;
+   outline: none;
+   border: 2px solid white;
+   border-radius: 40px;
+   font-size: 16px;
+   color: #fff;
+   padding: 20px 45px 20px 20px;
+ }
+
+ .input-box input::placeholder {
+   color: #fff;
+ }
+
+ .input-box i {
+   position: absolute;
+   right: 20px;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 14.5px;
+
+ }
+
+ .register a:hover {
+   transform: scale(1.05);
+   transition: 0.5s;
+   color: red;
+ }
 
 
-.wrap .remember-forgot{
-  display: flex;
-  justify-content: space-between;
-  font-size: 14.5px;
-  margin: -15px 0 15px;
-}
+ .wrap .remember-forgot {
+   display: flex;
+   justify-content: space-between;
+   font-size: 14.5px;
+   margin: -15px 0 15px;
+ }
 
-.remember-forgot label input{
-  accent-color: #fff;
-  margin-right: 3px;
-}
+ .remember-forgot label input {
+   accent-color: #fff;
+   margin-right: 3px;
+ }
 
-.remember-forgot a{
-  color: #fff;
-  text-decoration: none;
-}
+ .remember-forgot a {
+   color: #fff;
+   text-decoration: none;
+ }
 
-.remember-forgot a:hover{
-  text-decoration: underline;
-}
+ .remember-forgot a:hover {
+   text-decoration: underline;
+ }
 
-.wrap .btn{
-  width: 100%;
-  height: 45px;
-  background: #fff;
-  border: none;
-  outline: none;
-  border-radius: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  font-size: 16px;
-  color: #5C6C79;
-  font-weight: 600;
-}
+ .wrap .btn,
+ .chatForm .create {
+   width: 100%;
+   height: 45px;
+   background: #fff;
+   border: none;
+   outline: none;
+   border-radius: 40px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   cursor: pointer;
+   font-size: 16px;
+   color: #5C6C79;
+   font-weight: 600;
+ }
 
-.wrap .register-link{
-  font-size: 14.5px;
-  text-align: center;
-  margin: 20px 0 15px;
-}
+ .chatForm .create {
+   width: 20%;
+   height: 50%;
+   float: left;
+ }
 
-.register-link p a{
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-}
+ .wrap .register-link {
+   font-size: 14.5px;
+   text-align: center;
+   margin: 20px 0 15px;
+ }
 
-.register-link p a:hover{
-  text-decoration: underline;
-}
+ .register-link p a {
+   color: #fff;
+   text-decoration: none;
+   font-weight: 600;
+ }
 
-header{
-  top: 0;
-  padding: 20px;
-  font-family: 'New Super Mario Font U', sans-serif;
-  color: white;
-}
+ .register-link p a:hover {
+   text-decoration: underline;
+ }
 
-nav{
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background-color: transparent;
-  
-}
-.navLinks{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-  width: 20%;
-}
+ header {
+   top: 0;
+   padding: 20px;
+   font-family: 'New Super Mario Font U', sans-serif;
+   color: white;
+ }
 
-nav ul li {
-  list-style: none;
-  
-}
-nav ul li a{
-  color: white;
-  text-decoration: none;
-  font-size: 25px;
-  font-family: 'New Super Mario Font U', sans-serif;
-}
+ nav {
+   top: 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   background-color: transparent;
 
-nav div li{
-  list-style: none;
-}
-nav div li a{
-  color: white;
-  
-  font-size: 20px;
-  text-decoration: none;
-  font-family: 'New Super Mario Font U', sans-serif;
-}
-nav div li a:hover{
-  transform: scale(1.005);
-  transition: 0.5s;
-  color: red;
-}
-nav ul li a:hover{
-  transform: scale(1.05);
-  transition: 0.5s;
-  color: red;
-}
+ }
 
-.chatForm {
-  font-size: 36px;
-  text-align: center;
-}
+ .navLinks {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 20px;
+   width: 20%;
+ }
 
-.chatForm .input-box{
-  position: relative;
-  width: 85%;
-  height: 50%;
-  margin: 30px 0;
-}
+ nav ul li {
+   list-style: none;
 
- #userMessage{
-  width: 85%;
-  height: 50%;
-  background: transparent;
-  border: none;
-  outline: none;
-  border: 2px solid white;
-  border-radius: 40px;
-  font-size: 16px;
-  color: #fff;
-  padding: 20px 45px 20px 20px;
-}
+ }
 
- input::placeholder{
-  color: #fff;
-}
+ nav ul li a {
+   color: white;
+   text-decoration: none;
+   font-size: 25px;
+   font-family: 'New Super Mario Font U', sans-serif;
+ }
 
-.input-box i{
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 14.5px;
+ nav div li {
+   list-style: none;
+ }
 
-}
-.mappedChats{
-  display: flex;
-  justify-content: center; 
-  align-items: space-between; 
-  height: 80%;
-  overflow-y: auto;
-}
+ nav div li a {
+   color: white;
 
-button {
-height:40px;
-width: 150px;
-border: none;
-padding: 10px;
-margin: 10px;
-border-radius: 7px;
-text-align: center;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
+   font-size: 20px;
+   text-decoration: none;
+   font-family: 'New Super Mario Font U', sans-serif;
+ }
 
-.message{
-  background-color: blue;
-  border: white;
-  border-radius: 10px;
-  width: 80%;
-  margin: 10px;
-  padding: 5px;
-  color: white;
-}
-.message2{
+ nav div li a:hover {
+   transform: scale(1.005);
+   transition: 0.5s;
+   color: red;
+ }
 
-  background-color: green;
-  border: white;
-  border-radius: 10px;
-  width: 80%;
-  margin: 10px;
-  padding: 5px;
-  color: white;
-  float: right;
-}
-.mappedMessages{
-  height: 300px;
-  display: flex;
-  border: 3px solid white;
-  border-radius: 5px;
-  flex-direction: column;
-  overflow: scroll;
-  justify-content: space-between;
-  align-items: center;
-}
+ nav ul li a:hover {
+   transform: scale(1.05);
+   transition: 0.5s;
+   color: red;
+ }
 
-.chatFunctions{
-  display: flex;
-  justify-content: center;
-}
+ .chatForm {
+   font-size: 36px;
+   text-align: center;
+ }
+
+ .chatForm .input-box {
+   position: relative;
+   width: 85%;
+   height: 50%;
+   margin: 30px 0;
+ }
+
+ #userMessage {
+   width: 85%;
+   height: 50%;
+   background: transparent;
+   border: none;
+   outline: none;
+   border: 2px solid white;
+   border-radius: 40px;
+   font-size: 16px;
+   color: #fff;
+   padding: 20px 45px 20px 20px;
+ }
+
+ input::placeholder {
+   color: #fff;
+ }
+
+ .input-box i {
+   position: absolute;
+   right: 20px;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 14.5px;
+
+ }
+
+ .mappedChats {
+   display: flex;
+   justify-content: center;
+   align-items: space-between;
+   height: 80%;
+   overflow-y: auto;
+ }
+
+ button {
+   height: 40px;
+   width: 150px;
+   border: none;
+   padding: 10px;
+   margin: 10px;
+   border-radius: 7px;
+   text-align: center;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+ }
+
+ .message {
+   background-color: blue;
+   border: white;
+   border-radius: 10px;
+   width: 80%;
+   margin: 10px;
+   padding: 5px;
+   color: white;
+ }
+
+ .message2 {
+
+   background-color: green;
+   border: white;
+   border-radius: 10px;
+   width: 80%;
+   margin: 10px;
+   padding: 5px;
+   color: white;
+   float: right;
+ }
+
+ .mappedMessages {
+   height: 300px;
+   display: flex;
+   border: 3px solid white;
+   border-radius: 5px;
+   flex-direction: column;
+   overflow: scroll;
+   justify-content: space-between;
+   align-items: center;
+ }
+
+ .chatFunctions {
+   display: flex;
+   justify-content: center;
+ }
 
  .messageForm {
-padding: 10px;
-}
+   padding: 10px;
+ }

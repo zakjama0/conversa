@@ -42,7 +42,7 @@ const ChatForm = ({postChatrooms }) => {
                         onChange={handleChange}
                         value={stateChatroom.name}
                     />
-                    <input className="create" type="submit" value="+" />
+                    <input className="create" type="submit" value="Create" />
                     </div>
                     
                 </form>
