@@ -4,7 +4,7 @@
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Installation Instruction](#installation)
-3. [Technology](#technology)
+3. [Tech Stack](#tech-stack)
 4. [MVP](#mvp)
 7. [Extension](#extension)
 8. [Component Diagram](#component-diagram)
@@ -30,7 +30,7 @@ Conversa is a web application designed to facilitate communication between users
     ```
     npm install
     ```
-4. Download the Backend of this project using the following link - installation instructions included ()
+4. Download the Backend of this project using the following link - installation instructions included in (``` https://github.com/sahilpatel1906/Conversa_API ```)
 5. Start the backend application in any IDE / terminal
 6. Start the Development Server: Once the dependencies are installed, the user can start the development server by running:
     ```
@@ -39,15 +39,16 @@ Conversa is a web application designed to facilitate communication between users
 This command will start a local development server and open the React app in a web browser. The user can then view and interact with the app.
 
 
-<a id="technology"></a>
-### Tech Stack
-This is a front-end project and its built using:
-+ JavaScript + React
-+ HTML
-+ CSS
+<a id="tech-stack"></a>
+## Tech Stack
 
+Conversa is built on the following technologies:
+- **JavaScript + React**: For building interactive UIs and managing state.
+- **HTML**: The standard markup language for creating web pages.
+- **CSS**: For styling and presenting the content elegantly.
 
-The Backend API is :
+The backend API utilizes ``` https://github.com/sahilpatel1906/Conversa_API ```
+
 
 <a id="mvp"></a>
 ### MVP
