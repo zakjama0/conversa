@@ -3,6 +3,7 @@ import { userState } from "../container/ChatContainer";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 const Login = ({ users }) => {
     const [loggedUsername, setLoggedUsername] = useState("")
+    const [loggedEmail, setLoggedEmail] = useState("")
     const context = useContext(userState)
     const { activeUser, setActiveUser } = context;
     const navigate = useNavigate();
@@ -13,16 +14,17 @@ const Login = ({ users }) => {
             user.username.toLowerCase() === loggedUsername.toLowerCase()
         );
 
-    
         if (!filteredUser) {
             alert("Please Sign Up")
             e.target.reset();
             return;
         }
+
         setActiveUser(filteredUser);
         e.target.reset();
-        navigate("/chatrooms")
+        navigate("/chatrooms");
     }
+
 
     return (
         <>
