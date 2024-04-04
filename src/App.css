@@ -376,7 +376,14 @@ li {
 /* ==============*/
 
  .chat {
-
+background-color: #3e92cc;
+width: 1000px;
+border-radius: 10px;
+padding: 15px;
+margin: 15px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+border: solid red;
+float:right;
 }
 
 .chat h2 {
@@ -392,13 +399,14 @@ li {
 /* Chat List */
 /* ==============*/
 
-/* .chatList {
-
+ .chatList {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr; */
 }
 
 .mappedChats {
 
-} */
+}
 
 /* Chat Form */
 /* ==============*/

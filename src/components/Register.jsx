@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 const Register = ({ users, registerUser }) => {
 
   const [username, setUsername] = useState("");
@@ -53,24 +54,43 @@ const Register = ({ users, registerUser }) => {
                 <span></span>
                 <span></span>
        </section>
-        <h2>Sign up!</h2>
-        <form onSubmit={handleSubmit}>
-          <input className="name"
-            type="text"
-            name="username"
-            placeholder="Enter username"
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
-          />
-          <input className="email"
-            type="email"
-            name="email"
-            placeholder="Enter email address"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-          />
-          <input className="submit" type="submit" value="Sign Up" />
+       <div className="main-login">
+        <h2></h2>
+        <div className="wrapper">
+            <div className="wrap">
+            <form onSubmit={handleSubmit}>
+            <h1> Sign Up!</h1>
+              <div className="input-box">
+              <label htmlFor="login-name">Username:</label>
+              <input className="name"
+                type="text"
+                name="username"
+                placeholder="Enter username"
+                value={username}
+                onChange={(event) => setUsername(event.target.value)}
+              />
+              </div>
+              <div className="input-box">
+                <label htmlFor="login-email">Email:</label>
+              <input className="email"
+                type="email"
+                name="email"
+                placeholder="Enter email address"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+              />
+              </div>
+              <div class="register-link">
+                   <p> Already have an account? <Link to="/login" className="register">Log in!</Link></p>
+               </div>
+             
+              <input className="btn" type="submit" value="Sign Up" />
         </form>
+            </div>
+        </div>
+        
+       </div>
+        
       </div>
     </>
   );
