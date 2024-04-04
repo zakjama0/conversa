@@ -24,7 +24,7 @@ const Navigation = () => {
                      {activeUser.id ? 
 
                      <div className="navLinks">
-                     <li><Link to="/register" onClick={refreshActiveUser}>Sign Out</Link></li>
+                     <li><Link to="/register" onClick={refreshActiveUser}>Sign Out {activeUser.username}</Link></li>
                      </div>
                      :
                      <div className="navLinks">

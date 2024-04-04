@@ -16,6 +16,7 @@ const ChatContainer = () => {
     const [users, setUsers] = useState([]);
     const [activeUser, setActiveUser] = useState({});
     const [chatrooms, setChatrooms] = useState([]);
+    
 
     const fetchChatroom = async () => {
         const response = await fetch('http://localhost:8080/chatrooms')
@@ -36,9 +37,9 @@ const ChatContainer = () => {
         console.log(users)
     }, [])
 
-    const registerUser = (newUser) => {
-        setUsers([...users, newUser]);
-    }
+    // const registerUser = (newUser) => {
+    //     setUsers([...users, newUser]);
+    // }
 
     const postChatrooms = async (newChatroom) => {
 
@@ -59,6 +60,16 @@ const ChatContainer = () => {
         })
         console.log(chatroomId);
         setChatrooms(chatrooms.filter((chatroom) => chatroom.id !== chatroomId))
+    }
+
+    const registerUser = async (newUser) => {
+        const response = await fetch("http://localhost:8080/users", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newUser)
+        })
+        const savedUser = await response.json();
+        setUsers([...users, savedUser]);
     }
 
     const chatroomLoader = ({params}) => {
@@ -97,7 +108,8 @@ const ChatContainer = () => {
                                 path:"/chatrooms/:id",
                                 loader: chatroomLoader,
                                 element: <Chat deleteChatroom={deleteChatroom}/>
-                            }
+                            },
+    
                         ]
                 },
                 {
