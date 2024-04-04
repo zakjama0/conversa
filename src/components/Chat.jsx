@@ -6,7 +6,6 @@ import UserListForm from "./UserListForm";
 
 
 const Chat = ({ deleteChatroom }) => {
-
     const [messages, setMessages] = useState([]);
     const [users, setUsers] = useState([]);
     const chatroom = useLoaderData();
@@ -44,22 +43,17 @@ const Chat = ({ deleteChatroom }) => {
 
     return (
         <>
-            
                 <div className="wrapper">
                 <div className="wrap">
                     <h2>{chatroom.name}</h2>
-                    <UserListForm users={users} />
-                    <button onClick={handleDeleteButton}>Delete</button>
+                    <div className="chatFunctions"> 
+                        <UserListForm users={users} />
+                        <button onClick={handleDeleteButton}>Delete</button>
+                    </div>
                     <MessageList messages={messages} />
-
                     <MessageForm postMessage={postMessage} chatroom={chatroom} />
                     </div>
                 </div>
-                    
-                
-                
-                
-            
         </>
     );
 }

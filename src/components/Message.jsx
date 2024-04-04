@@ -4,10 +4,6 @@ const Message = ({ message }) => {
     const context = useContext(userState)
     const { activeUser } = context;
 
-    // const isSender = () =>{
-    //     return message.user.username === activeUser.username;
-    // }
-
     return (
         <article className={message.user.id === activeUser.id ? "message2" : "message" } >
             <p className="message-content">{message.message}</p>

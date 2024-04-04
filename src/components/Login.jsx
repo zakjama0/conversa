@@ -10,8 +10,7 @@ const Login = ({ users }) => {
     const handleFormSubmit = (event) => {
         event.preventDefault();
         const filteredUser = users.find((user) =>
-            user.username.toLowerCase() === loggedUsername.toLowerCase(),
-            
+            user.username.toLowerCase() === loggedUsername.toLowerCase(),     
         );
 
         if (!filteredUser) {
@@ -88,7 +87,6 @@ const Login = ({ users }) => {
                 </div>
             </div>
             
- 
                 <Outlet />
             </div>
         </>

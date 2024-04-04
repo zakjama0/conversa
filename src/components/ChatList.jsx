@@ -11,6 +11,18 @@ const ChatList = ({ chatrooms }) => {
      
     return (
         <>
+             <section class="stars">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </section>
             <div className="chatList">
                 <h1>Chatroom List</h1>
                 <button onClick={() => navigate("/chatrooms/new")}>+</button>
