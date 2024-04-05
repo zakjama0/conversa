@@ -327,14 +327,6 @@
    color: #fff;
  }
 
- .input-box i {
-   position: absolute;
-   right: 20px;
-   top: 50%;
-   transform: translateY(-50%);
-   font-size: 14.5px;
-
- }
 
  .mappedChats {
    display: flex;
