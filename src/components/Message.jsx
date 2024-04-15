@@ -5,7 +5,7 @@ const Message = ({ message }) => {
     const { activeUser } = context;
 
     return (
-        <article className={message.user.id === activeUser.id ? "message2" : "message" } >
+        <article className={message.user.id === activeUser.id ? "sentMessage" : "recievedMessage" } >
             <p className="message-content">{message.message}</p>
             <div className="sender">
                 <p className="sentName">Sent By: {message.user.username}</p>

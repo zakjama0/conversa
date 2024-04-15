@@ -347,7 +347,7 @@
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
  }
 
- .message {
+ .recievedMessage {
    background-color: blue;
    border: white;
    border-radius: 10px;
@@ -357,7 +357,7 @@
    color: white;
  }
 
- .message2 {
+ .sentMessage {
 
    background-color: green;
    border: white;

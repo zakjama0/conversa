@@ -20,7 +20,6 @@ const Navigation = () => {
                         <li><Link to="/">Home</Link></li>
                     </ul>
 
-                     {/* <ul className="navLinks"> */}
                      {activeUser.id ? 
 
                      <div className="navLinks">
@@ -37,7 +36,7 @@ const Navigation = () => {
                         
 
                  
-                     {/* </ul> */}
+                   
                 </nav>
                 <Outlet />
             </header>
